@@ -102,6 +102,11 @@ if [ -f ~/src/dotfiles/.bash_functions ]; then
     . ~/src/dotfiles/.bash_functions
 fi
 
+# $ definitions.
+if [ -f ~/src/dotfiles/.bash_\$ ]; then
+    . ~/src/dotfiles/.bash_\$
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -112,9 +117,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-# devscript
-DEBFULLNAME="Emanuele Grande"
-DEBEMAIL="ema.grandem@gmail.com"
-
