@@ -26,6 +26,8 @@ alias aupd='aup; aupg'
 alias ainst='sudo apt-get install'
 alias apurge='sudo apt-get purge'
 alias adist='sudo apt-get dist-upgrade'
+alias aaclean='sudo apt-get autoclean'
+alias aclean='sudo apt-get clean'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
