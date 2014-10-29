@@ -86,10 +86,10 @@ sudowrap ()
 				shift
 			done
 		fi
-		echo sudo "${opt[@]}" -- bash -xvc \""$c"\" >&2
-		command sudo "${opt[@]}" bash -xvc "$c"
+		#echo sudo "${opt[@]}" -- bash -xvc \""$c"\" >&2
+		command sudo "${opt[@]}" bash -xc "$c"
 	else
-		echo sudo "${opt[@]}" >&2
+		#echo sudo "${opt[@]}" >&2
 		command sudo "${opt[@]}"
 	fi
 }
