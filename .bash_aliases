@@ -6,7 +6,8 @@ alias lla='ls -lA'
 
 # 1 letter aliases
 alias g="git"
-alias n="nautilus"
+alias na="nautilus"
+alias ne="nemo"
 alias q='exit'
 alias t="touch"
 
