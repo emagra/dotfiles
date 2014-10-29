@@ -107,11 +107,6 @@ if [ -f ~/src/dotfiles/.bash_\$ ]; then
     . ~/src/dotfiles/.bash_\$
 fi
 
-# sudowarp
-if [ -f ~/src/dotfiles/.sudowrap ]; then
-    . ~/src/dotfiles/.sudowrap
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
