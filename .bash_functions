@@ -35,3 +35,16 @@ function s() {
 		subl "$@"
 	fi
 }
+
+function bak() {
+	[ $# -ne 1 ] && return
+
+	local orig="$1"
+	local path=$(dirname -z "$1")
+	local file=$(basename "$1")
+	local d=$(date +%F_%T)
+	local dest="$path/$file-$d.bak"
+
+	cp -a "$orig" "$dest"
+	# [ $? -eq 0 ] && echo "$dest"
+}
