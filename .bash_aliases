@@ -20,6 +20,18 @@ alias .....="cd ../../../.."
 # ssh alias
 alias g@n='ssh grandemi@netserver'
 
+# git alias
+alias ga='git add'
+alias gb='git branch'
+alias gch='git checkout'
+alias gc='git commit'
+alias gd='git diff'
+alias gl='git log'
+alias gpull='git pull'
+alias gpush='git push'
+alias gits='git status'
+alias gt='git tag'
+
 # apt-get aliases
 alias aup='sudo apt-get update'
 alias aupg='sudo apt-get upgrade'
