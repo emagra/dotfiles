@@ -31,8 +31,7 @@ alias aaclean='sudo apt-get autoclean'
 alias aclean='sudo apt-get clean'
 
 # Enable aliases to be sudo’ed
-#alias sudo='sudo '
-alias sudo=sudowrap
+alias sudo='sudo '
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
