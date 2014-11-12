@@ -2,6 +2,7 @@
 alias l='ls -CF'
 alias ll='ls -lF'
 alias la='ls -A'
+alias l1='ls -1'
 alias lla='ls -lA'
 
 # 1 letter aliases
