@@ -6,17 +6,18 @@ alias l1='ls -1'
 alias lla='ls -lA'
 
 # 1 letter aliases
-alias g="git"
-alias na="nautilus"
-alias ne="nemo"
+alias g='git'
+alias go='gnome-open'
+alias na='nautilus'
+alias ne='nemo'
 alias q='exit'
-alias t="touch"
+alias t='touch'
 
 # Easier navigation: .., ..., ...., .....
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # ssh alias
 alias g@n='ssh grandemi@netserver'
