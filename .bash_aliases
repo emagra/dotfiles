@@ -12,6 +12,8 @@ alias na='nautilus'
 alias ne='nemo'
 alias q='exit'
 alias t='touch'
+alias +x='chmod +x'
+alias c+x='chmod +x'
 
 # Easier navigation: .., ..., ...., .....
 alias ..='cd ..'
