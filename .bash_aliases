@@ -7,7 +7,8 @@ alias lla='ls -lA'
 
 # 1 letter aliases
 alias g='git'
-alias go='gnome-open'
+#alias go='gnome-open'
+alias go='xdg-open'
 alias na='nautilus'
 alias ne='nemo'
 alias q='exit'
