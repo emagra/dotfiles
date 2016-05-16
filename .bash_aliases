@@ -4,6 +4,7 @@ alias ll='ls -lF'
 alias la='ls -A'
 alias l1='ls -1'
 alias lla='ls -lA'
+alias llh='ls -lh'
 
 # 1 letter aliases
 alias g='git'
@@ -60,4 +61,3 @@ alias httpdump="sudo tcpdump -i eth0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GE
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
