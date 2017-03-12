@@ -48,6 +48,7 @@ alias apurge='sudo apt-get purge'
 alias adist='sudo apt-get dist-upgrade'
 alias aaclean='sudo apt-get autoclean'
 alias aclean='sudo apt-get clean'
+alias aar='sudo apt-get autoremove'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
