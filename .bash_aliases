@@ -25,6 +25,7 @@ alias .....='cd ../../../..'
 
 # ssh alias
 alias g@n='ssh grandemi@netserver'
+alias ms@m='ssh ms@miniserver'
 
 # git alias
 alias ga='git add'
@@ -34,9 +35,9 @@ alias gc='git commit'
 alias gca='git commit -a'
 alias gd='git diff'
 alias gl='git log'
-alias gll='git pull'
-alias gsh='git push'
-alias gst='git status'
+alias gpl='git pull'
+alias gph='git push'
+alias gst='git status'  # do NOT use gs is ghostscript
 alias gt='git tag'
 
 # apt-get aliases
