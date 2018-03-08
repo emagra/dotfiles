@@ -93,18 +93,22 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/src/dotfiles/.bash_aliases ]; then
-    . ~/src/dotfiles/.bash_aliases
+# Path of "dotfiles" path
+DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/src/dotfiles"
+#DOTFILES="~/src/dotfiles"
+
+if [ -f $DOTFILES/.bash_aliases ]; then
+    . $DOTFILES/.bash_aliases
 fi
 
 # Functions definitions.
-if [ -f ~/src/dotfiles/.bash_functions ]; then
-    . ~/src/dotfiles/.bash_functions
+if [ -f $DOTFILES/.bash_functions ]; then
+    . $DOTFILES/.bash_functions
 fi
 
 # $ definitions.
-if [ -f ~/src/dotfiles/.bash_\$ ]; then
-    . ~/src/dotfiles/.bash_\$
+if [ -f $DOTFILES/.bash_\$ ]; then
+    . $DOTFILES/.bash_\$
 fi
 
 # enable programmable completion features (you don't need to enable
