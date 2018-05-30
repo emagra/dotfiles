@@ -49,7 +49,7 @@ alias apurge='sudo apt purge'
 alias adist='sudo apt dist-upgrade'
 alias aaclean='sudo apt autoclean'
 alias aclean='sudo apt clean'
-alias aar='sudo apt autoremove'
+alias aar='sudo apt autoremove --purge'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
