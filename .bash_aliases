@@ -42,7 +42,7 @@ alias gt='git tag'
 
 # apt-get aliases
 alias aup='sudo apt update'
-alias aupg='sudo apt upgrade'
+alias aupg='sudo apt upgrade -V'
 alias aupd='aup; aupg'
 alias ainst='sudo apt install'
 alias apurge='sudo apt purge'
