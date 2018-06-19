@@ -34,7 +34,7 @@ alias gch='git checkout'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gd='git diff'
-alias gl='git log'
+alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 alias gpl='git pull'
 alias gph='git push'
 alias gst='git status'  # do NOT use gs is ghostscript
