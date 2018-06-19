@@ -30,10 +30,13 @@ alias ms@m='ssh ms@miniserver'
 # git alias
 alias ga='git add'
 alias gb='git branch'
+# list branches sorted by last modified @ https://gist.github.com/mwhite/6887990
+alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 alias gch='git checkout'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gd='git diff'
+# one-line log @ https://gist.github.com/mwhite/6887990
 alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 alias gpl='git pull'
 alias gph='git push'
