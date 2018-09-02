@@ -51,3 +51,13 @@ function bak() {
 		# [ $? -eq 0 ] && echo "$dest"
 	done
 }
+
+#
+# TODO function description
+# @param	TODO The first parameter
+# @return
+#
+function apr() {
+	sudo apt purge $@
+	sudo apt autoremove --purge
+}

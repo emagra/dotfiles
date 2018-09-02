@@ -97,6 +97,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/src/dotfiles"
 #DOTFILES="~/src/dotfiles"
 
+# Alias definitions
 if [ -f $DOTFILES/.bash_aliases ]; then
     . $DOTFILES/.bash_aliases
 fi
