@@ -26,7 +26,7 @@ alias .....='cd ../../../..'
 # ssh alias
 alias g@n='ssh grandemi@netserver'
 alias ms@m='ssh ms@miniserver'
-alias p@termo='ssh pi@termostatopi'
+alias p@t='ssh pi@termostatopi'
 
 # git alias
 alias ga='git add'
