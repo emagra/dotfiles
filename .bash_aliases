@@ -16,6 +16,7 @@ alias q='exit'
 alias t='touch'
 alias +x='chmod +x'
 alias c+x='chmod +x'
+alias tf='tail -f -n 100'
 
 # Easier navigation: .., ..., ...., .....
 alias ..='cd ..'
