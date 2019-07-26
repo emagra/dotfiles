@@ -28,6 +28,7 @@ alias .....='cd ../../../..'
 alias g@n='ssh grandemi@netserver'
 alias ms@m='ssh ms@miniserver'
 alias p@t='ssh pi@termostatopi'
+alias aws='ssh ubuntu@ec2-34-242-54-106.eu-west-1.compute.amazonaws.com'
 
 # git alias
 alias ga='git add'
