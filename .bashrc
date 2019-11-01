@@ -102,6 +102,10 @@ if [ -f $DOTFILES/.bash_aliases ]; then
     . $DOTFILES/.bash_aliases
 fi
 
+if [ -f $DOTFILES/.bash_ssh ]; then
+    . $DOTFILES/.bash_ssh
+fi
+
 # Functions definitions.
 if [ -f $DOTFILES/.bash_functions ]; then
     . $DOTFILES/.bash_functions
