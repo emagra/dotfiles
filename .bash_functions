@@ -62,11 +62,15 @@ function apr() {
 	sudo apt autoremove --purge
 }
 
+function pg() {
+	ps aux | grep -v grep | grep -i $1
+}
+
 # kill given program name
 # @param	program name
 #
-pgk() {
+function pgk() {
 	local param=$1; shift
-	pid=`ps aux | grep -v grep | grep -i $param | cut -d" " -f3`
+	pid=`ps aux | grep -v grep | grep -i $param | awk -F' ' '{ print $2 }'`
 	kill -9 ${pid}
 }

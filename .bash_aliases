@@ -17,7 +17,6 @@ alias t='touch'
 alias +x='chmod +x'
 alias c+x='chmod +x'
 alias tf='tail -f -n 100'
-alias pg='ps aux | grep -i'
 
 # Easier navigation: .., ..., ...., .....
 alias ..='cd ..'
