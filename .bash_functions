@@ -72,5 +72,9 @@ function pg() {
 function pgk() {
 	local param=$1; shift
 	pid=`ps aux | grep -v grep | grep -i $param | awk -F' ' '{ print $2 }'`
-	kill -9 ${pid}
+	pn=`ps ax -o command | grep -v grep | grep -i $param`
+	r=`kill -9 ${pid}`
+	if [[ $r -eq 0 ]]; then
+		echo "Killed $pid $pn"
+	fi
 }
