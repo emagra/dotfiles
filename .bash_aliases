@@ -51,6 +51,12 @@ alias aaclean='sudo apt autoclean'
 alias aclean='sudo apt clean'
 alias aar='sudo apt autoremove --purge'
 
+# flatpak aliases
+alias fupd='flatpak update'
+alias finst='flatpak install'
+alias frm='flatpak remove'
+alias fsrch='flatpak search'
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
