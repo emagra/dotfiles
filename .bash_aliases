@@ -35,7 +35,7 @@ alias gca='git commit -a'
 alias gd='git diff'
 # one-line log @ https://gist.github.com/mwhite/6887990
 # alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
-alias gl='git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gpl='git pull'
 alias gph='git push'
 alias gst='git status'  # do NOT use gs is ghostscript
