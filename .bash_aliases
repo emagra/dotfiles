@@ -7,7 +7,6 @@ alias lla='ls -lA'
 alias llh='ls -lh'
 
 # 1 letter aliases
-alias g='git'
 #alias go='gnome-open'
 alias go='xdg-open'
 alias na='nautilus'
@@ -25,6 +24,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # git alias
+alias g='git'
 alias ga='git add'
 alias gb='git branch'
 # list branches sorted by last modified @ https://gist.github.com/mwhite/6887990
@@ -36,10 +36,22 @@ alias gd='git diff'
 # one-line log @ https://gist.github.com/mwhite/6887990
 # alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gm='git merge'
 alias gpl='git pull'
 alias gph='git push'
 alias gst='git status'  # do NOT use gs is ghostscript
 alias gt='git tag'
+# Enable the __git_complete function to autocomplete aliases once you press TAB
+#__git_complete g __git_main
+#__git_complete ga _git_add
+#__git_complete gb _git_branch
+#__git_complete gch _git_checkout
+#__git_complete gm _git_merge
+#__git_complete gl _git_log
+#__git_complete gpl _git_pull
+#__git_complete gph _git_push
+#__git_complete gst _git_status
+#__git_complete gt _git_tag
 
 # apt-get aliases
 alias aup='sudo apt update'
@@ -70,3 +82,7 @@ alias httpdump="sudo tcpdump -i wlp3s0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote(sys.argv[1]));"'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
