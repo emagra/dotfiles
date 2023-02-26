@@ -41,17 +41,20 @@ alias gpl='git pull'
 alias gph='git push'
 alias gst='git status'  # do NOT use gs is ghostscript
 alias gt='git tag'
-# Enable the __git_complete function to autocomplete aliases once you press TAB
-#__git_complete g __git_main
-#__git_complete ga _git_add
-#__git_complete gb _git_branch
-#__git_complete gch _git_checkout
-#__git_complete gm _git_merge
-#__git_complete gl _git_log
-#__git_complete gpl _git_pull
-#__git_complete gph _git_push
-#__git_complete gst _git_status
-#__git_complete gt _git_tag
+# Autocomplete for aliases
+. /usr/share/bash-completion/completions/git
+__git_complete g _git_main
+__git_complete ga _git_add
+__git_complete gb  _git_branch
+__git_complete gch _git_checkout
+__git_complete gc _git_commit
+__git_complete gca _git_commit
+__git_complete gd _git_diff
+__git_complete gm _git_merge
+__git_complete gpl _git_pull
+__git_complete gph _git_push
+__git_complete gst _git_status
+__git_complete gt _git_tag
 
 # apt-get aliases
 alias aup='sudo apt update'
@@ -64,11 +67,22 @@ alias aaclean='sudo apt autoclean'
 alias aclean='sudo apt clean'
 alias aar='sudo apt autoremove --purge'
 
+# nala aliases
+alias nup='sudo nala update'
+alias nupg='sudo nala upgrade'
+alias nupd='nupg'
+alias ninst='sudo nala install'
+alias npurge='sudo nala purge'
+alias nclean='sudo nala clean'
+alias nar='sudo nala autoremove --purge'
+
 # flatpak aliases
 alias fupd='flatpak update'
 alias finst='flatpak install'
-alias frm='flatpak remove'
+alias frm='flatpak remove --delete-data -y'
 alias fsrch='flatpak search'
+
+alias update='nupd -y; fupd -y'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
