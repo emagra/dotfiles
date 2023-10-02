@@ -13,7 +13,7 @@ alias na='nautilus'
 alias ne='nemo'
 alias q='exit'
 alias t='touch'
-alias +x='chmod +x'
+alias x='chmod +x'
 alias c+x='chmod +x'
 alias tf='tail -f -n 100'
 
@@ -42,19 +42,19 @@ alias gph='git push'
 alias gst='git status'  # do NOT use gs is ghostscript
 alias gt='git tag'
 # Autocomplete for aliases
-. /usr/share/bash-completion/completions/git
-__git_complete g _git_main
-__git_complete ga _git_add
-__git_complete gb  _git_branch
-__git_complete gch _git_checkout
-__git_complete gc _git_commit
-__git_complete gca _git_commit
-__git_complete gd _git_diff
-__git_complete gm _git_merge
-__git_complete gpl _git_pull
-__git_complete gph _git_push
-__git_complete gst _git_status
-__git_complete gt _git_tag
+# . /usr/share/bash-completion/completions/git
+# __git_complete g _git_main
+# __git_complete ga _git_add
+# __git_complete gb  _git_branch
+# __git_complete gch _git_checkout
+# __git_complete gc _git_commit
+# __git_complete gca _git_commit
+# __git_complete gd _git_diff
+# __git_complete gm _git_merge
+# __git_complete gpl _git_pull
+# __git_complete gph _git_push
+# __git_complete gst _git_status
+# __git_complete gt _git_tag
 
 # apt-get aliases
 alias aup='sudo apt update'

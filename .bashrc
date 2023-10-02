@@ -89,6 +89,8 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
+export PATH="$PATH:/sbin"
+
 # Path of "dotfiles" path
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/src/dotfiles"
 #DOTFILES="~/src/dotfiles"
