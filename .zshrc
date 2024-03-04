@@ -122,7 +122,7 @@ configure_prompt() {
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
 PROMPT_ALTERNATIVE=ubuntu
-NEWLINE_BEFORE_PROMPT=yes
+NEWLINE_BEFORE_PROMPT=no
 # STOP KALI CONFIG VARIABLES
  
 if [ "$color_prompt" = yes ]; then
@@ -246,7 +246,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
  
 # Alias definitions
-DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/src/dotfiles"
+# DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/src/dotfiles"
+DOTFILES="$HOME/src/dotfiles"
 if [ -f $DOTFILES/.bash_aliases ]; then
     source $DOTFILES/.bash_aliases
 fi
