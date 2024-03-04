@@ -59,13 +59,13 @@ alias gt='git tag'
 # apt-get aliases
 alias aup='sudo apt update'
 alias aupg='sudo apt upgrade -V'
-alias aupd='aup; aupg'
 alias ainst='sudo apt install'
 alias apurge='sudo apt purge'
 alias adist='sudo apt dist-upgrade'
 alias aaclean='sudo apt autoclean'
 alias aclean='sudo apt clean'
 alias aar='sudo apt autoremove --purge'
+alias aupd='aup; aupg; aar'
 
 # nala aliases
 alias nup='sudo nala update'
