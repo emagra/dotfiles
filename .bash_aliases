@@ -81,8 +81,9 @@ alias fupd='flatpak update'
 alias finst='flatpak install'
 alias frm='flatpak remove --delete-data -y'
 alias fsrch='flatpak search'
+alias funused='flatpak remove --delete-data --unused -y'
 
-alias update='nupd -y; fupd -y'
+alias update='echo "## APT Update"; aup; echo "## APT Upgrade"; aupg -y; echo "## APT Remove"; aar -y; echo "## Flatpak Upgrade"; fupd -y'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -91,8 +92,8 @@ alias sudo='sudo '
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'wlp3s0' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i wlp3s0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d 'enp7s0' -t '^(GET|POST) '" #'tcp and port 80'"
+alias httpdump="sudo tcpdump -i enp7s0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote(sys.argv[1]));"'
