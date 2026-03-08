@@ -1,10 +1,14 @@
 # some more ls aliases
-alias l='ls -CF'
-alias ll='ls -lF'
-alias la='ls -A'
-alias l1='ls -1'
-alias lla='ls -lA'
-alias llh='ls -lh'
+# File system
+if command -v eza &>/dev/null; then
+  alias ls='eza -lgh --group-directories-first --icons=auto'
+  alias la='ls -a'
+  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lta='lt -a'
+else
+  alias ls='ls -lh --group-directories-first --color=auto'
+  alias la='ls -a'
+fi
 
 # 1 letter aliases
 #alias go='gnome-open'
@@ -13,9 +17,9 @@ alias na='nautilus'
 alias ne='nemo'
 alias q='exit'
 alias t='touch'
-alias x='chmod +x'
-alias c+x='chmod +x'
+alias +x='chmod +x'
 alias tf='tail -f -n 100'
+alias n='nvim'
 
 # Easier navigation: .., ..., ...., .....
 alias ..='cd ..'
@@ -92,12 +96,12 @@ alias sudo='sudo '
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'enp7s0' -t '^(GET|POST) '" #'tcp and port 80'"
-alias httpdump="sudo tcpdump -i enp7s0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d $(netstat -r | awk '/default/ {print $NF}') -t '^(GET|POST) '" #'tcp and port 80'"
+alias httpdump="sudo tcpdump -i $(netstat -r | awk '/default/ {print $NF}') -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote(sys.argv[1]));"'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias alert='notify-send --urgency=normal -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
