@@ -71,23 +71,10 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/src/dotfiles"
 #DOTFILES="~/src/dotfiles"
 
 # Alias definitions
-if [ -f $DOTFILES/.bash_aliases ]; then
-  . $DOTFILES/.bash_aliases
-fi
-
-if [ -f $DOTFILES/.bash_ssh ]; then
-  . $DOTFILES/.bash_ssh
-fi
-
-# Functions definitions.
-if [ -f $DOTFILES/.bash_functions ]; then
-  . $DOTFILES/.bash_functions
-fi
-
-# $ definitions.
-if [ -f $DOTFILES/.bash_\$ ]; then
-  . $DOTFILES/.bash_\$
-fi
+if [ -f $DOTFILES/aliases ]; then source $DOTFILES/aliases; fi
+if [ -f $DOTFILES/ssh ]; then source $DOTFILES/ssh; fi
+if [ -f $DOTFILES/functions ]; then source $DOTFILES/functions; fi
+if [ -f $DOTFILES/envs ]; then source $DOTFILES/envs; fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
